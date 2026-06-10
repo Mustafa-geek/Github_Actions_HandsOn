@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Test My Custom Action
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+   run-custom-tool:
+     runs-on: ubuntu-latest
+     steps: 
+      - name: Checkout Repo                     #download repo files on the blank machine first
+        uses: actions/checkout@v4
+
+      - name: Trigger the Action
+        uses: ./
+        with:
+          student_name: 'Khazi'
