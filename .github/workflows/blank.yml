@@ -19,4 +19,4 @@ jobs:
       - name: Trigger the Action
         uses: ./
         with:
-          student_name: 'Khazi'
+          student_name: 'amina'
